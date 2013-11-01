@@ -14,7 +14,7 @@ class SpringSecurityOauthVkontakteGrailsPlugin {
     def author = "Alexey Zhokhov"
     def authorEmail = "donbeave@gmail.com"
     def description = '''\
-Integrate [VK|http://www.vk.com] to [Spring Security plugin|http://grails.org/plugin/spring-security-oauth].
+Integrate [VK|http://www.vk.com] to [Spring Security OAuth plugin|http://grails.org/plugin/spring-security-oauth].
 '''
 
     def documentation = "https://github.com/donbeave/grails-spring-security-oauth-vkontakte"
