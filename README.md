@@ -1,4 +1,4 @@
-grails-spring-security-oauth-vkontakte
+grails-spring-security-oauth-vkontakte [![Build Status](https://api.travis-ci.org/donbeave/grails-spring-security-oauth-vkontakte.png?branch=master)](https://travis-ci.org/donbeave/grails-spring-security-oauth-vkontakte)
 ====================================
 
 VK extension for [Grails Spring Security OAuth][spring-security-oauth-plugin] plugin
