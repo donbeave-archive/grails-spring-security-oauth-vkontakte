@@ -17,6 +17,9 @@ package grails.plugin.springsecurity.oauth
 
 import grails.converters.JSON
 
+/**
+ * @author <a href='mailto:donbeave@gmail.com'>Alexey Zhokhov</a>
+ */
 class VkontakteSpringSecurityOAuthService {
 
   def oauthService

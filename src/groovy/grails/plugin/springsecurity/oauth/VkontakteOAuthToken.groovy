@@ -18,10 +18,10 @@ package grails.plugin.springsecurity.oauth
 import org.scribe.model.Token
 
 /**
- * OAuth authentication token for Google users. It's a standard {@link OAuthToken}
- * that returns the Google email address as the principal.
+ * OAuth authentication token for VK (Vkontakte) users. It's a standard {@link OAuthToken}
+ * that returns the Weibo User ID as the principal.
  *
- * @author Mihai CAZACU(cazacugmihai@gmail.com)
+ * @author <a href='mailto:donbeave@gmail.com'>Alexey Zhokhov</a>
  */
 class VkontakteOAuthToken extends OAuthToken {
 
@@ -36,6 +36,10 @@ class VkontakteOAuthToken extends OAuthToken {
   }
 
   String getSocialId() {
+    return uid
+  }
+
+  String getScreenName() {
     return uid
   }
 
