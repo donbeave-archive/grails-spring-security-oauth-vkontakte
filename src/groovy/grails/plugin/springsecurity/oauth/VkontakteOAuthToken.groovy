@@ -28,11 +28,29 @@ class VkontakteOAuthToken extends OAuthToken {
   public static final String PROVIDER_NAME = 'vkontakte'
 
   String uid
-
+  
+  String firstName
+  
+  String lastName
+  
+  String nickname
+  
+  String cityId
+  
+  String cityName
+  
   VkontakteOAuthToken(Token scribeToken, uid) {
     super(scribeToken)
     this.uid = uid
     this.principal = uid
+  }
+  
+  VkontakteOAuthToken(Token scribeToken, uid, String firstName, String lastName) {
+	super(scribeToken)
+	this.uid = uid
+	this.principal = uid
+	this.firstName = firstName
+	this.lastName = lastName
   }
 
   String getSocialId() {
