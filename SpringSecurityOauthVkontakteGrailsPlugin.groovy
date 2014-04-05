@@ -20,7 +20,7 @@ import grails.util.Environment
  */
 class SpringSecurityOauthVkontakteGrailsPlugin {
 
-    def version = '0.1.1'
+    def version = '0.2'
     def grailsVersion = '2.0.0 > *'
 
     def title = 'VK for Spring Security OAuth plugin'
