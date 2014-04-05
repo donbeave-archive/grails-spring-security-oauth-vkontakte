@@ -25,26 +25,26 @@ import org.scribe.model.Token
  */
 class VkontakteOAuthToken extends OAuthToken {
 
-  public static final String PROVIDER_NAME = 'vkontakte'
+    public static final String PROVIDER_NAME = 'vkontakte'
 
-  String uid
+    String uid
 
-  VkontakteOAuthToken(Token scribeToken, uid) {
-    super(scribeToken)
-    this.uid = uid
-    this.principal = uid
-  }
+    VkontakteOAuthToken(Token scribeToken, uid) {
+        super(scribeToken)
+        this.uid = uid
+        this.principal = uid
+    }
 
-  String getSocialId() {
-    return uid
-  }
+    String getSocialId() {
+        return uid
+    }
 
-  String getScreenName() {
-    return uid
-  }
+    String getScreenName() {
+        return uid
+    }
 
-  String getProviderName() {
-    return PROVIDER_NAME
-  }
+    String getProviderName() {
+        return PROVIDER_NAME
+    }
 
 }
