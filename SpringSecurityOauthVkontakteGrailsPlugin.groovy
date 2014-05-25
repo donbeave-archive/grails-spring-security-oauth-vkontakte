@@ -22,6 +22,7 @@ class SpringSecurityOauthVkontakteGrailsPlugin {
 
     def version = '0.2'
     def grailsVersion = '2.0.0 > *'
+    def loadAfter = ['springSecurityOauth']
 
     def title = 'VK for Spring Security OAuth plugin'
     def author = 'Alexey Zhokhov'
@@ -40,8 +41,6 @@ Integrate [VK|http://www.vk.com] to [Spring Security OAuth plugin|http://grails.
                            url   : 'https://github.com/donbeave/grails-spring-security-oauth-vkontakte/issues']
     def scm = [url: 'https://github.com/donbeave/grails-spring-security-oauth-vkontakte']
 
-    def loadAfter = ['spring-security-oauth']
-
     def doWithSpring = {
         loadConfig(application.config)
     }
@@ -54,6 +53,8 @@ Integrate [VK|http://www.vk.com] to [Spring Security OAuth plugin|http://grails.
         def newConfig = new ConfigSlurper(Environment.current.name).parse(
                 classLoader.loadClass('DefaultVkontakteOauthConfig')
         )
+
+        newConfig.oauth.providers.vkontakte.merge(config.oauth.providers.vkontakte)
 
         // Now merge DefaultVkontakteOauthConfig into the main config
         config.merge(newConfig)
