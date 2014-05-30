@@ -22,12 +22,9 @@ import grails.converters.JSON
  */
 class VkontakteSpringSecurityOAuthService {
 
-    def oauthService
-
     def createAuthToken(accessToken) {
-        def response = oauthService.getVkontakteResource(accessToken, 'https://api.vk.com/method/getProfiles')
-        def user = JSON.parse(response.body)
-        return new VkontakteOAuthToken(accessToken, user.response.get(0).uid)
+        def user = JSON.parse(accessToken.rawResponse)
+        new VkontakteOAuthToken(accessToken, user.email ?: user.user_id)
     }
 
 }
