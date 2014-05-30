@@ -36,6 +36,7 @@ Integrate [VK|http://www.vk.com] to [Spring Security OAuth plugin|http://grails.
     def license = 'APACHE'
 
     def developers = [[name: 'Alexey Zhokhov', email: 'donbeave@gmail.com']]
+    def organization = [name: 'Polusharie', url: 'http://www.polusharie.com']
 
     def issueManagement = [system: 'GITHUB',
                            url   : 'https://github.com/donbeave/grails-spring-security-oauth-vkontakte/issues']
